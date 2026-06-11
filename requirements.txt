@@ -1,0 +1,16 @@
+torch
+transformers
+datasets
+accelerate
+peft
+trl
+bitsandbytes
+huggingface_hub
+python-dotenv
+wandb
+matplotlib
+numpy
+pandas
+tqdm
+jupyter
+ipykernel
