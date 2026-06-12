@@ -127,22 +127,15 @@ Higher is better.
 
 ---
 
-## 📁 Repository Structure
+## 📈 Results
 
-```text
-.
-├── pricer/
-├── FTOpenSourceBaseModel.ipynb
-├── FinetuningOpenSource_QLoRA.ipynb
-├── FinetuningOpenSource_Evaluation.ipynb
-├── FinetuningOpenSource_Hyperparameters_Training.ipynb
-├── FinetuningOpenSource_(small_dataset).ipynb
-├── FinetuningOpenSource_(large_dataset).ipynb
-├── results.ipynb
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
+| Metric | Value |
+|----------|----------|
+| MAE | 39.88 |
+| MSE | 4636 |
+| R² Score | 78.9% |
+
+The fine-tuned model demonstrated improved pricing prediction performance compared to the baseline model.
 
 ---
 
@@ -169,6 +162,19 @@ WANDB_API_KEY=your_wandb_api_key
 
 ---
 
+## ✨ Key Features
+
+- Fine-tuning Llama 3.2 3B using LoRA and QLoRA
+- 4-bit quantization for memory-efficient training
+- Prompt-completion dataset generation
+- Supervised Fine-Tuning (SFT) pipeline
+- Hyperparameter tuning and experiment tracking
+- Automated evaluation using MAE, MSE, and R² metrics
+- Hugging Face Hub integration
+- Weights & Biases experiment monitoring
+
+---
+
 ## 🎯 Learning Outcomes
 
 Through this project, I gained practical experience in:
@@ -178,8 +184,7 @@ Through this project, I gained practical experience in:
 * QLoRA quantization techniques
 * Prompt engineering for fine-tuning
 * Hyperparameter tuning
-* Model evaluation and benchmarking
-* Hugging Face ecosystem
+* Model evaluation
 * Experiment tracking with W&B
 
 ---
