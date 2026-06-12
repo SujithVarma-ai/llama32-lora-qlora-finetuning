@@ -12,49 +12,64 @@ The goal of this project is to fine-tune an open-source Large Language Model (LL
 
 The project follows a structured workflow:
 
-### Day 1: LoRA & QLoRA Fundamentals
+### 1. LoRA & QLoRA Configuration
 
-* Explored Llama 3.2 3B architecture
-* Identified target modules (`q_proj`, `k_proj`, `v_proj`, `o_proj`)
-* Applied LoRA adapters
-* Implemented QLoRA with 4-bit quantization
-* Compared trainable vs total parameters
-* Reduced GPU memory requirements
+- Explored Llama 3.2 3B architecture
+- Identified target modules (`q_proj`, `k_proj`, `v_proj`, `o_proj`)
+- Applied LoRA adapters for parameter-efficient fine-tuning
+- Implemented QLoRA using 4-bit quantization
+- Compared trainable and total parameters
+- Optimized memory usage for efficient training
 
-### Day 2: Prompt Dataset Creation & Baseline Evaluation
+### 2. Dataset Preparation & Baseline Evaluation
 
-* Loaded lite and full datasets
-* Analyzed token distributions
-* Created prompt-completion pairs
-* Generated training-ready prompt datasets
-* Evaluated the base Llama 3.2 model
-* Measured baseline metrics:
+- Loaded product pricing datasets
+- Analyzed token distributions
+- Created prompt-completion pairs
+- Generated training-ready prompt datasets
+- Evaluated the base Llama 3.2 model
+- Established baseline performance metrics (MAE, MSE, R²)
 
-  * MAE (Mean Absolute Error)
-  * MSE (Mean Squared Error)
-  * R² Score
+### 3. Training Pipeline Setup
 
-### Day 3: Training Configuration
+- Configured Supervised Fine-Tuning (SFT)
+- Defined batch size, epochs, optimizer, and learning rate
+- Configured gradient accumulation
+- Integrated Weights & Biases experiment tracking
+- Prepared Hugging Face Hub integration
 
-* Configured SFT training pipeline
-* Defined training parameters
-* Configured batch size and epochs
-* Set learning rate scheduling
-* Enabled experiment tracking with Weights & Biases
+### 4. Hyperparameter Tuning & Model Training
 
-### Day 4: Training & Hyperparameter Tuning
+- Trained LoRA adapters on prompt datasets
+- Monitored training and validation loss
+- Tuned learning rate and training parameters
+- Saved and evaluated model checkpoints
 
-* Trained LoRA adapters
-* Monitored training and validation loss
-* Tuned learning rate and training parameters
-* Saved checkpoints during training
+### 5. Fine-Tuned Model Evaluation
 
-### Day 5: Fine-Tuning & Evaluation
+- Generated final fine-tuned model
+- Evaluated model performance on unseen data
+- Compared results against baseline model
+- Analyzed MAE, MSE, and R² metrics
+- Assessed prediction quality and model improvements
 
-* Generated final fine-tuned model
-* Evaluated model performance
-* Compared results against baseline model
-* Analyzed prediction quality
+---
+
+## 🔄 Workflow
+
+```text
+LoRA / QLoRA Configuration
+        ↓
+Prompt Dataset Preparation
+        ↓
+Base Model Evaluation
+        ↓
+Training Configuration
+        ↓
+LoRA Fine-Tuning
+        ↓
+Final Evaluation
+```
 
 ---
 
@@ -135,9 +150,9 @@ Higher is better.
 | MSE | 4636 |
 | R² Score | 78.9% |
 
-The fine-tuned model demonstrated improved pricing prediction performance compared to the baseline model.
+The model achieved an MAE of 39.88, MSE of 4636, and R² score of 78.9% on the evaluation dataset.
 
----
+```
 
 ## ⚙️ Installation
 
