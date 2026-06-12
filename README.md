@@ -164,8 +164,6 @@ cd llama32-lora-qlora-finetuning
 pip install -r requirements.txt
 ```
 
----
-
 ## 🔑 Environment Variables
 
 Create a `.env` file:
